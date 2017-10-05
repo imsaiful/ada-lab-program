@@ -197,7 +197,7 @@ void sort(int a[], int low, int high)
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2015-36-22.png)
 
 
-Program 6: Matrix Multiplication
+Program 5: Matrix Multiplication
 ```
 #include<stdio.h>
 int main()
