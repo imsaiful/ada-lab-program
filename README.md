@@ -343,3 +343,74 @@ int main()
 
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2000-13-35.png)
+
+
+Program 7: Longest Common Subsequence
+```
+#include<stdio.h>
+#include<string.h>
+int max(int , int);
+void Lcs(char *a,char *b)
+{
+int m=strlen(a);
+int n=strlen(b);
+int c[m+1][n+1];
+for(int i=0;i<=m;i++)
+{
+    for(int j=0;j<=n;j++)
+    {
+        if(i==0 || j==0)
+        {
+            c[i][j]=0;
+        }
+        else if(a[i-1]==b[j-1])
+        {
+            c[i][j]=c[i-1][j-1]+1;
+        }
+        else
+        {
+            c[i][j]=max(c[i-1][j],c[i][j-1]);
+        }
+    }
+}
+int index=c[m][n];
+char res[index+1];
+res[index]='\0';
+int i=m,j=n,k=index;
+while(i>0 && j>0)
+{
+    if(a[i-1]==b[j-1])
+    {
+        res[index-1]=a[i-1];
+        i--;
+        j--;
+        index--;
+    }
+    else if(c[i-1][j]>c[i][j-1])
+    {
+        i--;
+    }
+    else
+    {
+        j--;
+    }
+}
+puts(res);
+}
+int max(int x,int y)
+{
+    return (x>y)?x:y;
+}
+int main()
+{
+char a[20],b[20];
+printf("Enter the String 1");
+scanf("%s",a);
+printf("Enter the String 2");
+scanf("%s",b);
+Lcs(a,b);
+return 0;
+}
+
+```
+![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2001-06-53.png)
