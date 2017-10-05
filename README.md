@@ -196,7 +196,8 @@ void sort(int a[], int low, int high)
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2015-36-22.png)
 
-Program 6: Stressen Matrix Multiplication
+
+Program 6: Matrix Multiplication
 ```
 #include<stdio.h>
 int main()
@@ -274,6 +275,8 @@ int main()
 }
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2023-47-48.png)
+
+
 Program 6: Stressen Matrix Multiplication
 ```
 #include<stdio.h>
