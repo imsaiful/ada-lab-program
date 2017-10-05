@@ -274,7 +274,7 @@ int main()
      return 0;
 }
 ```
-![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2001-33-11.png)
+![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2001-39-29.png)
 
 
 Program 6: Stressen Matrix Multiplication
@@ -413,4 +413,4 @@ return 0;
 }
 
 ```
-![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2001-39-29.png)
+![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2001-06-53.png)
