@@ -3,7 +3,7 @@ All Algorithm lab program of AIACTR 5 sem in C
 
 
 
-Program 1:
+Program 1:Bubble Sort Algorithm
 ```
 #include<stdio.h>
 int main()
@@ -38,7 +38,8 @@ return 0;
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2012-10-35.png)
 
-Program 2: Insertion Sort
+
+Program 2: Insertion Sort Algorithm
 ```
 #include<stdio.h>
 int main()
@@ -74,7 +75,9 @@ return 0;
 
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2012-29-04.png)
-Program 3:
+
+
+Program 3: Quick Sort Algorithm
 ```
 #include<stdio.h>
 void QuickAlgo(int [],int  ,int );
@@ -133,7 +136,8 @@ int main()
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2015-00-44.png)
 
-Program 4: Merge Sort
+
+Program 4: Merge Sort Algorithm
 ```
 #include<stdio.h>
 void sort(int[], int , int );
