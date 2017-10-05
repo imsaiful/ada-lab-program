@@ -195,3 +195,147 @@ void sort(int a[], int low, int high)
     }
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2015-36-22.png)
+
+```
+#include<stdio.h>
+int main()
+{
+    int m1,n1,m2,n2,a[10][10],b[10][10],c[10][10];
+    int i,j,k;
+    printf("Enter the Number of row and column of matrix 1 \n");
+    scanf("%d%d",&m1,&n1);
+    printf("Enter the Number of row and column of matrix 2 \n");
+    scanf("%d%d",&m2,&n2);
+    printf("Enter the element of matrix 1 \n");
+    for(i=0;i<m1;i++)
+    {
+        for(j=0;j<n1;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter the element of the matrix 2 \n");
+    for(i=0;i<m2;i++)
+    {
+        for(j=0;j<n2;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("Matrix 1 is given by \n");
+     for(i=0;i<m1;i++)
+     {
+        for(j=0;j<n1;j++)
+        {
+            printf("%d \t",a[i][j]);
+        }
+        printf("\n");
+     }
+     printf("Matrix 2 is given by \n");
+     for(i=0;i<m1;i++)
+     {
+        for(j=0;j<n2;j++)
+        {
+            printf("%d \t",b[i][j]);
+        }
+        printf("\n");
+     }
+     if(n1==m2)
+     {
+     for(i=0;i<m1;i++)
+     {
+        for(j=0;j<n2;j++)
+            {
+            c[i][j]=0;
+                for(k=0;k<m2;k++)
+                {
+                    c[i][j]=c[i][j]+a[i][k]*b[k][j];
+
+                }
+
+            }
+     }
+     printf("Matrix Multiplication is given by \n");
+     for(i=0;i<m1;i++)
+     {
+        for(j=0;j<n2;j++)
+        {
+            printf("%d \t",c[i][j]);
+        }
+        printf("\n");
+     }
+     }
+     else
+     {
+        printf("Matrix multiplication is not possible");
+     }
+     return 0;
+}
+```
+![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-05%2023-47-48.png)
+Program 6: Stressen Matrix Multiplication
+```
+#include<stdio.h>
+int main()
+{
+    int a[2][2],b[2][2],c[2][2];
+    int i,j;
+    printf("Enter the element of matrix 1 \n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter the element of the matrix 2 \n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("Matrix 1 is given by \n");
+     for(i=0;i<2;i++)
+     {
+        for(j=0;j<2;j++)
+        {
+            printf("%d \t",a[i][j]);
+        }
+        printf("\n");
+     }
+     printf("Matrix 2 is given by \n");
+     for(i=0;i<2;i++)
+     {
+        for(j=0;j<2;j++)
+        {
+            printf("%d \t",b[i][j]);
+        }
+        printf("\n");
+     }
+     int p=(a[0][0]+a[1][1])*(b[0][0]+b[1][1]);
+     int q=(a[1][0]+a[1][1])*b[0][0];
+     int r=a[0][0]*(b[0][1]-b[1][1]);
+     int s=a[1][1]*(b[1][0]-b[0][0]);
+     int t=(a[0][0]+a[0][1])*b[1][1];
+     int u=(a[0][0]-a[1][0])*(b[0][0]+b[0][1]);
+     int v=(a[0][1]-a[1][1])*(b[1][0]+b[1][1]);
+     c[0][0]=p+s-t+v;
+     c[0][1]=r+t;
+     c[1][0]=q+s;
+     c[1][1]=p+r-q-u;
+     printf("Matrix Multiplication is given by \n");
+     for(i=0;i<2;i++)
+     {
+        for(j=0;j<2;j++)
+        {
+            printf("%d \t",c[i][j]);
+        }
+        printf("\n");
+     }
+     return 0;
+     }
+
+```
+![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2000-13-35.png)
