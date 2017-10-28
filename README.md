@@ -416,6 +416,78 @@ return 0;
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2001-06-53.png)
 
 
+Program 8: Matrix Chain Multipilication in C
+```
+#include<stdio.h>
+long int m[20][20];
+int s[20][20];
+int p[20],i,j,n;
+void printb(int i,int j)
+{
+if (i == j)
+                                printf(" A%d ",i);
+                else
+                {
+                                printf(" ( ");
+                                printb(i, s[i][j]);
+                                printb(s[i][j] + 1, j);
+                                printf(" ) ");
+                }
+}
+
+void matmultiply(void)
+{
+                long int q;
+                int k;
+                for(i=n;i>0;i--)
+ {
+for(j=i;j<=n;j++)
+{
+if(i==j)
+m[i][j]=0;
+else
+{
+ for(k=i;k<j;k++)
+  {
+    q=m[i][k]+m[k+1][j]+p[i-1]*p[k]*p[j];
+    if(q<m[i][j])
+    {
+      m[i][j]=q;
+      s[i][j]=k;
+    }
+  }
+  }
+}
+}
+printf("%d", m[1][n]);
+}
+
+void main()
+{
+int k;
+printf("Enter the no. of elements: ");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+for(j=i+1;j<=n;j++)
+{
+m[i][i]=0;
+m[i][j]=999999;
+s[i][j]=0;
+}
+printf("\nEnter the dimensions: \n");
+for(k=0;k<=n;k++)
+{
+printf("P%d: ",k);
+scanf("%d",&p[k]);
+}
+matmultiply();
+i=1,j=n;
+printf("\nMULTIPLICATION SEQUENCE : ");
+printb(i,j);
+}
+```
+![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/dd.png)
+
 Program 9: Fractional Knapsack Problem
 
 ```
