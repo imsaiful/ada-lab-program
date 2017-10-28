@@ -414,3 +414,54 @@ return 0;
 
 ```
 ![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/Screenshot%20from%202017-10-06%2001-06-53.png)
+Program 9: Fractional Knapsack Problem
+
+```
+#include<stdio.h>
+int main()
+{
+int W,n,i,j=0;
+int w[10],v[10];
+float sum=0;
+printf("Enter the capacity of the Knapsack \n");
+scanf("%d",&W);
+printf("Enter the number of items \n");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+int x=i+1;
+printf("for element %d \n",x);
+printf("Enter the weight \t");
+scanf("%d",&w[i]);
+printf("Enter the value \t");
+scanf("%d",&v[i]);
+}
+int m=W;
+while(m>=0)
+{
+    float max=0;
+    for(i=0;i<n;i++)
+    {
+    float x=(float)(v[i]/w[i]);
+    if(x>max)
+    {
+        max=(float)(v[i]/w[i]);
+        j=i;
+    }
+    }
+    if(w[j]>m)
+    {
+      sum=sum+m*max;
+      m=-1;
+    }
+    else
+    {
+        m=m-w[j];
+        sum=sum+(float)v[j];
+        v[j]=0;
+    }
+}
+printf("Total Profit is given by=%0.1f",sum);
+}
+```
+![alt text](https://github.com/imsaiful/ada-lab-program/blob/master/kn.png)
